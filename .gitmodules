@@ -1,0 +1,3 @@
+[submodule "pacman-modificado"]
+	path = pacman-modificado
+	url = https://github.com/martinix1/pacman-modificado.git
