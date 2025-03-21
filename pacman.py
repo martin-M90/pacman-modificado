@@ -106,9 +106,11 @@ def world():
                 path.goto(x + 10, y + 10)
                 path.dot(2, 'white')
 
+                
+
 
 def move():
-    """Move pacman and all ghosts."""
+    "Move pacman and all ghosts."
     writer.undo()
     writer.write(state['score'])
 
@@ -131,6 +133,17 @@ def move():
     dot(20, 'yellow')
 
     for point, course in ghosts:
+        # Nuevo comportamiento para hacer los fantasmas más inteligentes
+        dx = pacman.x - point.x
+        dy = pacman.y - point.y
+        distance = (dx**2 + dy**2)**0.5
+
+        # Intentar mover hacia Pacman (simple IA)
+        if distance > 0:
+            course.x = 5 * (dx / distance)
+            course.y = 5 * (dy / distance)
+
+        # Mueve el fantasma
         if valid(point + course):
             point.move(course)
         else:
@@ -157,6 +170,7 @@ def move():
     ontimer(move, 100)
 
 
+    
 def change(x, y):
     """Change pacman aim if valid."""
     if valid(pacman + vector(x, y)):
