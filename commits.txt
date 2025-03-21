@@ -1,0 +1,11 @@
+*   8a3f480 Merge pull request #2 from martin-M90/tablero-velocidad
+|\  
+| * 1a3b610 Añadido pacman-modificado como submódulo
+| * 591dc33 Modifica el tablero y aumenta la velocidad de los fantasmas
+* | 1156ec3 Merge pull request #1 from martin-M90/fantasmas-inteligentes
+|\| 
+| * c280783 Mejora la IA de los fantasmas
+| * 297ddc6 Mejora la IA de los fantasmas
+|/  
+* 62f9eb6 Agrega código base de Pacman
+* a8780f0 Initial commit
